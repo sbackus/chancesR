@@ -1,0 +1,17 @@
+<%= form_for :binomial, url: binomials_path do |b| %>
+	<p>
+		<%= b.label :trials %><br>
+		<%= b.text_field :trials %>
+	</p>
+	<p>
+		<%= b.label :successes %><br>
+		<%= b.text_field :successes %>
+	</p>
+	<p>
+		<%= b.label :chances %><br>
+		<%= b.text_field :chances %>
+	</p>
+	<p>
+		<%= b.submit %>
+	</p>
+<% end %>

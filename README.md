@@ -1,4 +1,0 @@
-chancesR
-========
-
-A probability app

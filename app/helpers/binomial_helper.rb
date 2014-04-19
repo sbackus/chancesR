@@ -1,0 +1,2 @@
+module BinomialHelper
+end
