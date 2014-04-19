@@ -1,0 +1,4 @@
+chancesR
+========
+
+A probability app
