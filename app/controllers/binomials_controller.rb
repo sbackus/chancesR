@@ -5,10 +5,15 @@ class BinomialsController < ApplicationController
 
   def create
   	@binomial = Binomial.new(binomial_params)
+    if Binomial.count > 6
+      @old_binomial = Binomial.first
+      @old_binomial.destroy
+    end
 
   	if @binomial.save
   		redirect_to @binomial
   	else
+      flash[:notice] = "You have blank fields. "
   		render 'new'
   	end
   end
@@ -16,14 +21,15 @@ class BinomialsController < ApplicationController
   def show
   	@binomial = Binomial.find(params[:id])
 
-  	#@answer = Binomial.factorial(binomial_params)
+  	#@answer = Binomial.
   end
 
   def index
-  	@binomial = Binomial.all
+  	@binomials = Binomial.all
   end
 
-  def edit
+  def destroy
+
   end
 
   private

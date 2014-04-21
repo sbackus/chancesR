@@ -1,4 +1,15 @@
 <%= form_for :binomial, url: binomials_path do |b| %>
+	<% if @binomial.errors.any? %>
+	  	<div id="error_explanation">
+    		<h2><%= pluralize(@binomial.errors.count, "error") %> prohibited
+      			this binomial from being saved:</h2>
+    		<ul>
+    			<% @binomial.errors.full_messages.each do |msg| %>
+      				<li><%= msg %></li>
+    			<% end %>
+    		</ul>
+  		</div>
+  	<% end %>
 	<p>
 		<%= b.label :trials %><br>
 		<%= b.text_field :trials %>

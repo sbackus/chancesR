@@ -1,2 +1,21 @@
 <h1>Binomial Distribution</h1>
 
+<h1>Listing answers</h1>
+ 
+<table>
+  <tr>
+    <th>Trials</th>
+    <th>Successes</th>
+    <th>Chances</th>
+    <th>Adds</th>
+  </tr>
+ 
+  <% @binomials.each do |b| %>
+    <tr>
+      <td><%= b.trials %></td>
+      <td><%= b.successes %></td>
+      <td><%= b.chances %></td>
+      <td><%= b.add() %></td>
+    </tr>
+  <% end %>
+</table>
