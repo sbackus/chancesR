@@ -11,13 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140418023349) do
+ActiveRecord::Schema.define(version: 20140422011956) do
 
   create_table "binomials", force: true do |t|
     t.integer  "trials"
     t.integer  "successes"
     t.float    "chances"
     t.float    "answer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "poissons", force: true do |t|
+    t.string   "lambda"
+    t.string   "occurances"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

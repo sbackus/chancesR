@@ -1,0 +1,24 @@
+<%= form_for :poisson, url: poissons_path do |b| %>
+	<% if @poisson.errors.any? %>
+	  	<div id="error_explanation">
+    		<h2><%= pluralize(@poisson.errors.count, "error") %> prohibited
+      			this answer from being saved:</h2>
+    		<ul>
+    			<% @poisson.errors.full_messages.each do |msg| %>
+      				<li><%= msg %></li>
+    			<% end %>
+    		</ul>
+  		</div>
+  	<% end %>
+	<p>
+		<%= b.label :occurances %><br>
+		<%= b.number_field :occurances %>
+	</p>
+	<p>
+		<%= b.label :lambda %><br>
+		<%= b.number_field :lambda %>
+	</p>
+	<p>
+		<%= b.submit %>
+	</p>
+<% end %>

@@ -2,7 +2,7 @@
 	<% if @binomial.errors.any? %>
 	  	<div id="error_explanation">
     		<h2><%= pluralize(@binomial.errors.count, "error") %> prohibited
-      			this binomial from being saved:</h2>
+      			this answer from being saved:</h2>
     		<ul>
     			<% @binomial.errors.full_messages.each do |msg| %>
       				<li><%= msg %></li>
@@ -12,15 +12,15 @@
   	<% end %>
 	<p>
 		<%= b.label :trials %><br>
-		<%= b.text_field :trials %>
+		<%= b.number_field :trials %>
 	</p>
 	<p>
 		<%= b.label :successes %><br>
-		<%= b.text_field :successes %>
+		<%= b.number_field :successes %>
 	</p>
 	<p>
 		<%= b.label :chances %><br>
-		<%= b.text_field :chances %>
+		<%= b.number_field :chances %>
 	</p>
 	<p>
 		<%= b.submit %>

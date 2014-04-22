@@ -5,7 +5,7 @@ class BinomialsController < ApplicationController
 
   def create
   	@binomial = Binomial.new(binomial_params)
-    if Binomial.count > 6
+    if Binomial.count > 5
       @old_binomial = Binomial.first
       @old_binomial.destroy
     end
@@ -20,16 +20,10 @@ class BinomialsController < ApplicationController
 
   def show
   	@binomial = Binomial.find(params[:id])
-
-  	#@answer = Binomial.
   end
 
   def index
   	@binomials = Binomial.all
-  end
-
-  def destroy
-
   end
 
   private

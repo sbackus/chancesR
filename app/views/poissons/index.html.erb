@@ -1,0 +1,20 @@
+<h1>Poisson Distribution</h1>
+
+<h1>Listing answers</h1>
+ 
+<table>
+  <tr>
+    <th>Occurances</th>
+    <th>Average</th>
+    <th>Poisson Probability</th>
+  </tr>
+ 
+  <% @poissons.each do |p| %>
+    <tr>
+      <td><%= p.occurances %></td>
+      <td><%= p.lambda %></td>
+      <td><%= p.Poisson_Probability() %></td>
+    </tr>
+  <% end %>
+</table>
+

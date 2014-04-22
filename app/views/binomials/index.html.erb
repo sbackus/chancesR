@@ -7,7 +7,8 @@
     <th>Trials</th>
     <th>Successes</th>
     <th>Chances</th>
-    <th>Adds</th>
+    <th>Binomial Probability</th>
+    <th>Cumulative Probability</th>
   </tr>
  
   <% @binomials.each do |b| %>
@@ -15,7 +16,9 @@
       <td><%= b.trials %></td>
       <td><%= b.successes %></td>
       <td><%= b.chances %></td>
-      <td><%= b.add() %></td>
+      <td><%= b.Binomial_Probability() %></td>
+      <td><!--%= b.Cumulative_Probability() %--></td>
     </tr>
   <% end %>
 </table>
+
